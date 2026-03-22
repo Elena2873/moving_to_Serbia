@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Матвей — миграционные услуги в Сербии</title>
+
+<style>
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+  background: radial-gradient(circle at 20% 20%, #1e293b, transparent),
+              radial-gradient(circle at 80% 30%, #312e81, transparent),
+              #020617;
+  color: white;
+}
+
+/* SECTION SPACING */
+section { padding: 80px 0; }
+
+/* CONTAINER */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* TITLES */
+h1, h2 { text-align: center; }
+h1 { font-size: 48px; margin-bottom: 10px; }
+h1 span {
+  background: linear-gradient(90deg, #60a5fa, #a78bfa);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+h2 { font-size: 32px; margin-bottom: 40px; }
+
+/* GLASS STYLE */
+.glass {
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.12);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+  padding: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.glass:hover { transform: translateY(-5px); }
+
+/* HERO */
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* центр по вертикали */
+  align-items: center;     /* центр по горизонтали */
+  text-align: center;
+  min-height: 100vh;       /* занимает весь экран */
+  padding: 0 20px;
+}
+
+/* SERVICES GRID */
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+
+/* SERVICE HEADER */
+.service h3::after { content: " +"; float: right; }
+.service.active h3::after { content: " −"; }
+.service ul { display: none; margin-top: 12px; padding-left: 18px; color: rgba(255,255,255,0.85); }
+
+/* CASES */
+.case strong { display: block; margin-bottom: 10px; color: #93c5fd; }
+
+/* REVIEWS */
+.review { font-style: italic; color: rgba(255,255,255,0.85); }
+
+/* BUTTON */
+.btn {
+  display: inline-block; margin-top: 25px; padding: 14px 30px;
+  border-radius: 14px; text-decoration: none; color: white;
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  box-shadow: 0 10px 30px rgba(59,130,246,0.5);
+  transition: 0.3s;
+}
+.btn:hover { transform: scale(1.05); }
+
+/* ANIMATION */
+.hidden { opacity: 0; transform: translateY(40px); transition: 0.6s ease; }
+.show { opacity: 1; transform: translateY(0); }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero hidden">
+  <div class="container">
+    <h1>Матвей — получить результат<br><span>без стресса и ошибок</span></h1>
+    <p>Помощь с документами, ВНЖ, бизнесом и жильём</p>
+    <a href="https://t.me/gagdadds" class="btn" target="_blank" rel="noopener noreferrer">Получить консультацию</a>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="container hidden">
+  <h2>Миграционные услуги</h2>
+  <div class="grid">
+
+    <!-- ВНЖ/ПМЖ -->
+    <div class="service glass" onclick="toggle(this)">
+      <h3>ВНЖ / ПМЖ</h3>
+      <ul>
+        <li>Помощь в оформлении временного и постоянного вида на жительство</li>
+        <li>Консультация по выбору оптимального основания для ВНЖ</li>
+        <li>Подготовка и сбор всех необходимых документов</li>
+        <li>Сопровождение на подаче документов в МВД Сербии</li>
+        <li>Проверка статуса заявления и получение готовых документов</li>
+        <li>Помощь в продлении ВНЖ и переходе на ПМЖ</li>
+      </ul>
+    </div>
+
+    <!-- Регистрация компании -->
+<div class="service glass" onclick="toggle(this)">
+      <h3>Регистрация компании</h3>
+      <ul>
+        <li>Открытие и регистрация бизнеса в Сербии</li>
+        <li>Регистрация ООО (DOO) и предпринимателя (PR)</li>
+        <li>Открытие банковского счёта для компании</li>
+        <li>Помощь с налоговой регистрацией</li>
+        <li>Консультации по ведению бизнеса в Сербии</li>
+        <li>Сопровождение на всех этапах регистрации</li>
+      </ul>
+    </div>
+
+    <!-- Жильё -->
+    <div class="service glass" onclick="toggle(this)">
+      <h3>Аренда и покупка жилья</h3>
+      <ul>
+        <li>Подбор и оформление недвижимости</li>
+        <li>Поиск подходящих вариантов аренды или покупки</li>
+        <li>Организация просмотров квартир и домов</li>
+        <li>Проверка юридической чистоты сделки</li>
+        <li>Помощь в оформлении договоров</li>
+        <li>Сопровождение сделки от начала до конца</li>
+        <li>Оформление документов для переезда членов семьи</li>
+      </ul>
+    </div>
+
+    <!-- Образование -->
+    <div class="service glass" onclick="toggle(this)">
+      <h3>Образование</h3>
+      <ul>
+        <li>Поступление в университеты и школы Сербии</li>
+        <li>Консультация по выбору учебного заведения</li>
+        <li>Помощь в подготовке документов для поступления</li>
+        <li>Нострификация дипломов и аттестатов</li>
+        <li>Сопровождение при поступлении</li>
+        <li>Помощь в оформлении студенческого ВНЖ</li>
+      </ul>
+    </div>
+
+    <!-- Воссоединение семьи -->
+    <div class="service glass" onclick="toggle(this)">
+      <h3>Воссоединение семьи</h3>
+      <ul>
+        <li>Оформление документов для переезда членов семьи</li>
+        <li>Консультация по требованиям для воссоединения</li>
+        <li>Подготовка пакета документов</li>
+        <li>Помощь в оформлении приглашений</li>
+        <li>Сопровождение всего процесса</li>
+        <li>Поддержка после получения ВНЖ</li>
+        <li>Получение и обмен водительских прав</li>
+      </ul>
+    </div>
+
+    <!-- Водительские права -->
+    <div class="service glass" onclick="toggle(this)">
+      <h3>Водительские права</h3>
+      <ul>
+        <li>Обмен и получение сербских водительских прав</li>
+        <li>Консультация по процедуре обмена прав</li>
+        <li>Помощь в сборе необходимых документов</li>
+        <li>Запись и сопровождение в МВД</li>
+        <li>Помощь в прохождении медкомиссии</li>
+        <li>Получение готовых документов</li>
+      </ul>
+    </div>
+
+    <!-- Другие услуги -->
+    <div class="service glass" onclick="toggle(this)">
+      <h3>Другие услуги</h3>
+      <ul>
+        <li>Переводы, апостили, консультации и прочее</li>
+        <li>Перевод документов с нотариальным заверением</li>
+        <li>Апостилирование документов</li>
+        <li>Открытие банковских счетов</li>
+        <li>Получение налогового номера</li>
+        <li>Регистрация автомобиля</li>
+        <li>Любые другие миграционные вопросы</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- CASES -->
+<section class="container hidden">
+  <h2>Кейсы</h2>
+  <div class="grid">
+    <div class="case glass">
+      <strong>ВНЖ за 14 дней</strong>
+      Подготовка документов → получение без отказа
+    </div>
+    <div class="case glass">
+      <strong>Открытие компании</strong>
+      Регистрация + банковский счёт за 3 дня
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="container hidden">
+  <h2>Отзывы</h2>
+  <div class="grid">
+    <div class="review glass">“Сделал всё под ключ — вообще не вникал”</div>
+    <div class="review glass">“Быстро, чётко и без проблем”</div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="container hidden" id="contact">
+  <h2>Связь</h2>
+  <div style="text-align:center;">
+    <a href="https://t.me/gagdadds" class="btn" target="_blank" rel="noopener noreferrer">Написать в Telegram</a>
+  </div>
+</section>
+
+<script>
+function toggle(el) {
+  const list = el.querySelector("ul");
+  el.classList.toggle("active");
+  list.style.display = list.style.display === "block" ? "none" : "block";
+}
+/* Анимация при скролле */
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add("show");
+    }
+  });
+});
+
+document.querySelectorAll(".hidden").forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
